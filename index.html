@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Prolay_Halder_Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/particle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/tree.css">
+    <link rel="stylesheet" href="./css/proj.css">
+    <link rel="stylesheet" href="./css/achive.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/stairs.css">
+    <link rel="stylesheet" href="./css/solarSystem.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r146/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/ColladaLoader.js"></script>
+    <link rel="icon" href="./Images/pic.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <header>
+        <div class="header">
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <a href="/">About Me</a>
+                <a href="#skl">Skills</a>
+                <a href="#projects-section">Projects</a>
+                <a href="#achive">Achievements</a>
+                <a href="#cont">Contact Me</a>
+            </nav>
+
+            <!-- Mobile Toggle Button -->
+            <button id="menu-toggle">☰</button>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div id="hamburger-menu">
+                <button id="menu-close">✖</button>
+                <a id="about" href="#abt">About Me</a>
+                <a id="skill" href="#skl">Skills</a>
+                <a id="project" href="#projects-section">Projects</a>
+                <a id="achievement" href="#achive">Achievements</a>
+                <a id="contact" href="#cont">Contact Me</a>
+                <a id="download" href="./Files/PROLAY HALDER_Internship.pdf" download>Download Resume</a>
+            </div>
+        </div>
+    </header>
+    <!-- Main body of portfolio  -->
+    <main>
+        <!-- about section  -->
+        <section class="about" id="abt">
+            <div class="summury">
+                <img id="dp" src="./Images/pic.jpg" alt="Profile">
+                <h3>Hello, I am Prolay Halder.</h3>
+                <p class="bio">B.Tech graduate in Computer Science and Engineering with a solid foundation in web
+                    development and
+                    programming (C, Python). Though a fresher with no formal experience, I am eager to apply my skills
+                    and grow as a software developer in a dynamic team. Looking for an opportunity to contribute and
+                    enhance my abilities.
+                </p>
+            </div>
+
+            <h3>Education &#x1F393;</h3>
+            <div class="ed">
+                <div class="sidebar">
+                    <div class="edu" id="graduation">
+                        <div class="arrow" style="display: none;"></div>
+                        Graduation
+                    </div>
+                    <div class="edu" id="higher-secondary">
+                        <div class="arrow" style="display: none;"></div>
+                        Higher Secondary
+                    </div>
+                    <div class="edu" id="secondary">
+                        <div class="arrow"></div>
+                        Secondary
+                    </div>
+                </div>
+                <div class="content">
+                    <div id="graduation-details" class="details">
+                        <h2>Graduation (B.Tech)</h2>
+                        <p>Stream: Computer Science and Engineering</p>
+                        <p>Year: Sep, 2022 - Present</p>
+                        <p>University: Guru Nanak Institute of Technology</p>
+                        <p>Description: Pursuing B.Tech CSE, 3rd year with average SGPA: 8.79</p>
+                    </div>
+                    <div id="higher-secondary-details" class="details">
+                        <h2>Higher Secondary (Class XII)</h2>
+                        <p>Stream: Science (PCM)</p>
+                        <p>Year: Aug, 2020 - Jun, 2022</p>
+                        <p>School: Uttarpara Model High School</p>
+                        <p>Description: Got A+ with aggregate percentage 78.17%</p>
+                    </div>
+                    <div id="secondary-details" class="details active">
+                        <h2>Secondary (Class X)</h2>
+                        <p>Year: Jan, 2019 - Jul, 2020</p>
+                        <p>School: Uttarpara Model High School</p>
+                        <p>Description: Got A+ with aggregate percentage of 85.28%</p>
+                    </div>
+                    <button class="next-btn">Next</button>
+                </div>
+            </div>
+            <div class="wrapper" id="robot-container">
+            </div>
+            <div class="container">
+                <div class="about lang">
+                    <h3>Language &#127760;</h3>
+                    <span>English</span>
+                    <span>Hindi</span>
+                    <span>Bengali</span>
+                </div>
+                <div class="about">
+                    <h3>Hobbies &#128187;</h3>
+                    <span>Video Editing</span>
+                    <span>Cinematography</span>
+                    <span>Electronics</span>
+                </div>
+                <div class="about">
+                    <h3>Interest &#129302;</h3>
+                    <span>javaScript</span>
+                    <span>Machine Learning</span>
+                    <span>php</span>
+                </div>
+            </div>
+        </section>
+        <!-- Skills Section  -->
+        <section class="skills-tree" id="skl">
+            <h3>Skills &#9881;</h3>
+            <div class="tree">
+                <div class="node">C</div>
+                <div class="node">Git</div>
+                <div class="node">SQL</div>
+                <div class="node">CSS</div>
+                <div class="node">HTML</div>
+                <div class="node">DBMS</div>
+                <div class="node">Python</div>
+                <div class="node">Django</div>
+                <div class="node">MongoDB</div>
+                <div class="node">Machine Learning</div>
+                <div class="node">Operating System</div>
+                <div class="node">Prompt Engineering</div>
+            </div>
+        </section>
+        <!-- project section  -->
+        <section id="projects-section">
+            <h3>Projects &#128203;</h3>
+            <div class="projects-wrapper">
+ 
+              <div class="project-category">
+                <h2>Python Projects</h2>
+                <div class="project-item">
+                  <div class="project-title">Hangman Game Using Python</div>
+                  <a href="./Pages/Python/Hangman.html" class="view-code-btn">View Code</a>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Number Guessing Game Using Python</div>
+                    <a href="./Pages/Python/number.html" class="view-code-btn">View Code</a>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Rock-Paper-Scissor Game Using Python</div>
+                    <a href="./Pages/Python/rps.html" class="view-code-btn">View Code</a>
+                </div>
+              </div>
+          
+              <div class="project-category">
+                <h2>C Projects</h2>
+                <div class="project-item">
+                  <div class="project-title">Callender Printing Project in C</div>
+                  <a href="./Pages/C/calender.html" class="view-code-btn">View Code</a>
+                </div>
+                <div class="project-item">
+                    <div class="project-title">Loan EMI Workflow Generator Project Using C</div>
+                    <a href="./Pages/C/loan.html" class="view-code-btn">View Code</a>
+                  </div>
+              </div>
+              
+              <div class="project-category">
+                <h2>Django Projects</h2>
+                <div class="project-item">
+                  <div class="project-title">Django Project 1</div>
+                  <button class="view-code-btn">View Code</button>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          
+
+        <!-- achivement section  -->
+        <section class="achive" id="achive">
+            <h3>Achivements &#127942;</h3>
+            <div class="achivement_container">
+                <div class="wrap">
+                    <img src="https://imagedelivery.net/qc7VvyphMGWFiPVvTbB-ww/swapps.com/2019/04/django-faster.jpg/w=1600,h=900"
+                        alt="Django_Training">
+                    <aside>Django Training at Ardent Infotech pvt. ltd.</aside>
+                </div>
+                <div class="wrap">
+                    <img src="./Images/organisor.jpg" alt="Organizer">
+                    <aside>Organizer in marketing team of Annual Collage Fest</aside>
+                </div>
+                <div class="wrap">
+                    <img src="./Images/Tech_fest.jpg" alt="Tech_fest">
+                    <aside>Event Head of web dev in Departmental Tech-Fest</aside>
+                </div>
+                <div class="wrap">
+                    <img src="./Images/Nptel_AI.png" alt="Nptel_AI">
+                    <aside>Passed NPTEL course of AI and Get certificate</aside>
+                </div>
+                <div class="wrap">
+                    <img src="./Images/quiz.jpg" alt="quiz">
+                    <aside>Participated in nation wide online QUIZ</aside>
+                </div>
+                <div class="wrap">
+                    <img src="https://playerzpot.com/blog/wp-content/uploads/2022/02/WhatsApp-Image-2022-02-01-at-5.09.07-PM.jpeg"
+                        alt="Sports">
+                    <aside>Participated in collage level sport games</aside>
+                </div>
+                <div class="wrap">
+                    <img src="./Images/Event.jpg" alt="Events">
+                    <aside>Participated in various events and workshop</aside>
+                </div>
+                <div class="wrap">
+                    <img src="./Images/volentier.jpg" alt="volentier">
+                    <aside>Worked as volentier in collage fest</aside>
+                </div>
+                <div class="wrap">
+                    <img src="./Images/course.png" alt="course">
+                    <aside>Completed courses in coursera and IBM skillbuild</aside>
+                </div>
+            </div>
+        </section>
+        <!-- contact me section  -->
+        <section class="contact" id="cont">
+            <h3>Contact Me 🌏</h3>
+            <div class="contact_form">
+                <form action="./Response/form_responce.php" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="details">Details</label>
+                    <textarea id="details" name="details" rows="4" placeholder="Your Message..." required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+        <!-- footer section  -->
+        <footer class="footer">
+            <div class="footer-container">
+                <ul class="social-links">
+                    <li><a href="mailto:prolayhalder2004@gmail.com" target="_blank"><i class="fa fa-envelope"></i>
+                            Email</a></li>
+                    <li><a href="https://www.instagram.com/_prolay_halder_/" target="_blank"><i
+                                class="fa fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://github.com/PROLAY2004" target="_blank"><i class="fa">&#xf09b;</i> GitHub</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/prolay-halder-526553253/" target="_blank"><i
+                                class="fa fa-linkedin-square"></i> LinkedIn</a></li>
+                </ul>
+                <div class="resume-button">
+                    <a href="./Pages/ViewResume.html">View Resume</a>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- robot js -->
+<script src="https://cdn.rawgit.com/Verlangieri/robot-animation/master/app/vendor/three.min.js"></script>
+<script src="https://cdn.rawgit.com/Verlangieri/robot-animation/master/app/vendor/gsap.min.js"></script>
+<script src="https://cdn.rawgit.com/Verlangieri/robot-animation/master/app/vendor/dat.gui.min.js"></script>
+<script src="https://cdn.rawgit.com/Verlangieri/robot-animation/master/app/vendor/colladaLoader2.min.js"></script>
+<script src="./js/particles.js"></script>
+<script src="./js/stairs.js"></script>
+<script src="./js/robot.js"></script>
+
+</html>

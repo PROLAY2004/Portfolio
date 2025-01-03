@@ -1,0 +1,282 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #0f1111;
+    color: #eee;
+}
+
+body {
+    font-family: "Kalam", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.7rem;
+}
+.summury img#dp{
+    width: 120px;
+    background: transparent;
+    border: none;
+    border-radius: 100%;
+    float: left;
+    shape-outside: circle(50%);
+    margin: 1%;
+}
+a {
+    text-decoration: none;
+    background: transparent;
+    text-shadow: 0 0 10px #34486d, 0 0 20px #4a6fb4, 0 0 30px #415f97;
+}
+a::after {
+    content: '';
+    display: block; /* Creates a block-level underline */
+    width: 0; /* Start with no width */
+    height: 1px; /* Thickness of the underline */
+    background-color: #eee; /* Color of the underline */
+    transition: width 0.4s ease;
+}
+a:hover::after {
+    width: 100%; /* Full width of the text */
+    text-shadow: 0 0 10px #34486d, 0 0 20px #4a6fb4, 0 0 30px #415f97;
+}
+
+.desktop-nav a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.5rem;
+}
+
+
+/* Mobile Toggle Button */
+#menu-toggle {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #eee;
+    cursor: pointer;
+    z-index: 800;
+}
+
+/* Hamburger Menu */
+#hamburger-menu {
+    display: none; /* Hide by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%; /* Adjust width as needed */
+    height: 150%;
+    background-color: rgba(15, 17, 17, 0.95); /* Slightly transparent background */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Ensure it appears above other content */
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+
+#hamburger-menu.active {
+    transform: translateX(0); /* Slide into view */
+}
+
+/* Close Button */
+#menu-close {
+    align-self: flex-end; /* Align close button to the right */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #eee;
+    cursor: pointer;
+}
+
+/* Links in the Menu */
+#hamburger-menu a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h3{
+    background: transparent;
+    color: rgb(223, 193, 59);
+    line-height: 1.5; /* Improve readability */
+    margin-bottom: 10px; /* Add spacing */
+}
+
+section,span{
+    background: transparent;
+}
+
+p.bio{
+    background: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+}
+header {
+    position: relative;
+    display: flex;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    background-color: #0f1111;
+}
+nav, header, main {
+    z-index: 10; /* Example: Place them above the robot container */
+}
+
+nav {
+    background-color: rgba(15, 17, 17, 0.8);
+    display: flex;
+    position: fixed;
+    gap: 3%;
+    justify-content: center;
+    padding: 2%;
+    z-index: 20;
+    width: 100%;
+    font-family: "Gochi Hand", serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    font-style: normal;
+}
+div.summury{
+    margin: 12% auto;
+    margin-bottom: 15%;
+    opacity: 0; /* Start fully transparent */
+    transform: translateY(50px); /* Start 50px below its original position */
+    animation: fadeInUp 1s ease-out forwards;
+}
+main {
+    position: absolute;
+    padding: 4%;
+    z-index: 2;
+    background: transparent;
+}
+
+div.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    margin-bottom: 7%;
+    background: transparent;
+}
+div.about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+    transition: all 500ms;
+}
+div.about:hover{
+    transform: scale(1.05);
+}
+#robot-container {
+    width: 100%; /* Use full width of its parent */
+    height: 30vmax;
+    overflow: hidden; /* Prevent overflowing content */
+    background: transparent;
+    z-index: 1; /* Ensure it does not cover other content */
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+        background: transparent;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        background: transparent;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+    div.summury img#dp{
+        display: block;
+        float: none;
+        margin: 10% auto;
+        background: transparent;
+    }
+    p.bio{
+        margin-bottom: 2%;
+        background: transparent;
+    }
+    a:hover::after {
+        display: none;
+    }
+    a{
+        text-shadow: none;
+    }
+    .desktop-nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+        gap: 10px;
+        display: none;
+    }
+    /* Show mobile toggle button */
+    #menu-toggle {
+        display: block;
+    }
+
+    /* Ensure hamburger menu is accessible */
+    #hamburger-menu {
+        display: flex;
+        background: #0f1111;
+    }
+
+    .summury {
+        margin: 5% auto;
+        text-align: center; /* Center-align text for better readability */
+        background: transparent;
+    }
+    div.about:hover{
+        transform: none;
+    }
+    .summury h3{
+        text-align: center;
+        font-size: 30px;
+        background: transparent;
+    }
+
+    div.container {
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    div.lang{
+        display: none;
+    }
+
+    #robot-container {
+        height: 40vh; /* Reduce height on smaller screens */
+    }
+
+}
+@media (max-width: 480px) {
+    nav {
+        font-size: 1rem; 
+    }
+
+    .next-btn {
+        width: 100%; /* Make button full-width for easy tapping */
+    }
+}

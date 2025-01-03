@@ -1,0 +1,77 @@
+.skills-tree,.achive {
+    padding: 1rem;
+    background: tansparent;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.tree {
+    display: grid;
+    background: transparent;
+    grid-template-columns: repeat(6, 1fr); /* 8 bubbles per row on desktop */
+    gap: 1.5rem;
+    justify-items: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Bubble Styling */
+.node {
+    width: 120px;
+    height: 60px;
+    background: radial-gradient(circle, #1694a5, #62d7fa);
+    color: #0f1111;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 1;
+}
+.node:hover{
+    box-shadow: 0 0 10px #34486d, 0 0 20px #4a6fb4, 0 0 30px #415f97;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.node {
+    animation: float 3s ease-in-out infinite; /* Add float animation */
+}
+
+.node:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.node:nth-child(even) {
+    animation-delay: 1s;
+}
+/* Responsive Adjustments */
+
+@media (max-width: 768px) {
+    .tree {
+        grid-template-columns: repeat(3, 1fr); /* 4 bubbles per row */
+    }
+    .node {
+        width: 60px;
+        height: 60px;
+        font-size: 0.7rem;
+        border-radius: 30%;
+    }
+}

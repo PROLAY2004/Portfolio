@@ -1,0 +1,79 @@
+.contact {
+    padding: 40px 20px;
+    color: #ffffff;
+}
+
+.contact_form {
+    width: 35%;
+    margin: 2% auto;
+    background-color: #1a1d1d;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+form{
+    background-color: #1a1d1d;
+}
+.contact_form form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #dddddd;
+    background-color: #1a1d1d;
+    text-align: left;
+}
+
+.contact_form form input,
+.contact_form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #2b2f2f;
+    color: #ffffff;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.contact_form form input::placeholder,
+.contact_form form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.contact_form form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00bcd4;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact_form form button:hover {
+    background-color: #008c9e;
+}
+@media (max-width: 768px) {
+    .contact_form {
+        width: 95%; /* Increase the width for smaller screens */
+        padding: 15px; /* Adjust padding for better fit */
+    }
+
+    .contact_form form label {
+        font-size: 16px; /* Slightly smaller font size for labels */
+    }
+
+    .contact_form form input,
+    .contact_form form textarea {
+        font-size: 14px; /* Ensure text remains readable */
+    }
+
+    .contact_form form button {
+        font-size: 14px; /* Adjust button text size */
+        padding: 8px; /* Slightly reduce button padding */
+    }
+}

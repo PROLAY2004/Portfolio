@@ -1,0 +1,86 @@
+.achivement_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    background: transparent;
+}
+
+.wrap {
+    background-color: #1c1f1f; /* Slightly lighter background for cards */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align content */
+    text-align: center; /* Center align text */
+}
+
+.wrap:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.wrap img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 0; /* Ensure the image stays rectangular */
+    cursor: pointer;
+}
+
+.wrap aside {
+    padding: 15px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #2a2d2d; /* Dark gray for text background */
+    width: 100%; /* Full width of the card */
+    margin: 0; /* Remove any default margin */
+    cursor: pointer;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+    .achivement_container {
+        display: flex; /* Switch to flexbox for horizontal scrolling */
+        flex-wrap: nowrap; /* Prevent wrapping of items */
+        overflow-x: auto; /* Allow horizontal scrolling */
+        overflow-y: hidden; /* Prevent vertical overflow */
+        scroll-snap-type: x mandatory; /* Enable smooth snapping */
+        gap: 10px; /* Space between items */
+        padding: 10px; /* Padding inside the container */
+        max-width: 85vw; /* Prevent the container from exceeding viewport width */
+    }
+
+    .wrap {
+        flex: 0 0 80%; /* Each card takes 80% of the viewport width */
+        scroll-snap-align: center; /* Snap to the center of each card */
+        transition: transform 0.3s ease-in-out; /* Smooth animation for hover */
+    }
+
+    .wrap:hover {
+        transform: scale(1.05); /* Enlarge the card on hover */
+        z-index: 1; /* Bring the hovered card to the front */
+    }
+
+    .wrap img {
+        width: 100%; /* Ensure images fill their container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Hide scrollbars for a cleaner look */
+    .achivement_container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .achivement_container {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+

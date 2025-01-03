@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>PDF Viewer</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR202VPZfMD9kdS4yqx2x8aeg6DYlFypnBNBA&s" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f1111; /* Dark theme background */
+            color: #eee; /* Light text color */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1f1f;
+            color: rgb(223, 193, 59);
+            font-size: 1.5rem;
+            border-bottom: 1px solid #444;
+        }
+
+        .pdf-container {
+            width: 100vw; /* Full viewport width */
+            height: 90vh; /* Take most of the viewport height */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Hide the page for non-desktop devices */
+        @media (max-width: 1024px) {
+            body {
+                display: none; /* Hide content for smaller screens */
+            }
+
+            body::after {
+                content: "This page is only available for desktop view.";
+                display: block;
+                text-align: center;
+                color: #ff6b6b; /* Warning text color */
+                font-size: 1.5rem;
+                padding: 50px;
+                background-color: #1c1f1f;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Welcome, This is my Resume.
+    </header>
+    <div class="pdf-container">
+        <iframe src="../Files/PROLAY HALDER_Internship.pdf" title="PDF Viewer"></iframe>
+    </div>
+</body>
+</html>
